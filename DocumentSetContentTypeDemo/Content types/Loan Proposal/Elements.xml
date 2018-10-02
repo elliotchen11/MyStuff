@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ContentType ID="0x0120D52000442F5196B2EA0C489F01F37985515E5B" Name="Loan Proposal" Group="SharePoint 2010 Custom Development" Overwrite="TRUE" ProgId="SharePoint.DocumentSet" PushDownChangedResourceFilesOnly="TRUE" xmlns="http://schemas.microsoft.com/sharepoint/">
+		<Folder TargetName="_cts/Loan Proposal" />
+		<FieldRefs>
+			<FieldRef ID="{8553196d-ec8d-4564-9861-3dbe931050c8}" Name="FileLeafRef" Required="TRUE" Hidden="FALSE" />
+			<FieldRef ID="{475c2610-c157-4b91-9e2d-6855031b3538}" Name="FullName" />
+			<FieldRef ID="{cbb92da4-fd46-4c7d-af6c-3128c2a5576e}" Name="Description" ShowInNewForm="TRUE" ShowInEditForm="TRUE" />
+			<FieldRef ID="{2defb7a6-aca0-43bc-8d73-cbd07e5b7503}" Name="Loan_x0020_Amount" />
+			<FieldRef ID="{413b4744-f709-4952-8864-fd38e60bd754}" Name="Loan_x0020_Reason" />
+			<FieldRef ID="{7cf8011a-9d47-44f4-a49e-f72d6b038161}" Name="Loan_x0020_Type" />
+			<FieldRef ID="{b824e17e-a1b3-426e-aecf-f0184d900485}" Name="ItemChildCount" />
+			<FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="FALSE" Hidden="TRUE" />
+			<FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+			<FieldRef ID="{960ff01f-2b6d-4f1b-9c3f-e19ad8927341}" Name="FolderChildCount" />
+		</FieldRefs>
+		<XmlDocuments>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/welcomepageview">
+				<WelcomePageView xmlns="http://schemas.microsoft.com/office/documentsets/welcomepageview" LastModified="1/1/1 0:00:01 AM" />
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
+				<spe:Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+					<Receiver>
+						<Name>DocumentSet ItemUpdated</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10002</Type>
+						<SequenceNumber>100</SequenceNumber>
+						<Assembly>Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.DocumentSets.DocumentSetEventReceiver</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+					<Receiver>
+						<Name>DocumentSet ItemAdded</Name>
+						<Synchronization>Synchronous</Synchronization>
+						<Type>10001</Type>
+						<SequenceNumber>100</SequenceNumber>
+						<Assembly>Microsoft.Office.DocumentManagement, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+						<Class>Microsoft.Office.DocumentManagement.DocumentSets.DocumentSetItemsEventReceiver</Class>
+						<Data />
+						<Filter />
+					</Receiver>
+				</spe:Receivers>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes">
+				<act:AllowedContentTypes xmlns:act="http://schemas.microsoft.com/office/documentsets/allowedcontenttypes" LastModified="05/12/2012 13:23:22">
+					<AllowedContentType id="0x0101" />
+					<AllowedContentType id="0x0101008CF1CDE6AF3C644E93569474BF0D9DFD" />
+					<AllowedContentType id="0x0101009A5057FEE7BD674EB0C0B448F20F833E" />
+					<AllowedContentType id="0x0101009148F5A04DDD49CBA7127AADA5FB792B00AADE34325A8B49CDA8BB4DB53328F214" />
+				</act:AllowedContentTypes>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/sharedfields">
+				<sf:SharedFields xmlns:sf="http://schemas.microsoft.com/office/documentsets/sharedfields" LastModified="05/12/2012 13:23:22">
+					<SharedField id="cbb92da4-fd46-4c7d-af6c-3128c2a5576e" />
+					<SharedField id="413b4744-f709-4952-8864-fd38e60bd754" />
+					<SharedField id="475c2610-c157-4b91-9e2d-6855031b3538" />
+					<SharedField id="7cf8011a-9d47-44f4-a49e-f72d6b038161" />
+					<SharedField id="2defb7a6-aca0-43bc-8d73-cbd07e5b7503" />
+				</sf:SharedFields>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/defaultdocuments">
+				<dd:DefaultDocuments xmlns:dd="http://schemas.microsoft.com/office/documentsets/defaultdocuments" LastModified="05/12/2012 13:23:22" AddSetName="True">
+					<DefaultDocument name="Loan Application Form.docx" idContentType="0x0101008CF1CDE6AF3C644E93569474BF0D9DFD" />
+				</dd:DefaultDocuments>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/office/documentsets/welcomepagefields">
+				<wpf:WelcomePageFields xmlns:wpf="http://schemas.microsoft.com/office/documentsets/welcomepagefields" LastModified="05/12/2012 13:23:22">
+					<WelcomePageField id="475c2610-c157-4b91-9e2d-6855031b3538" />
+					<WelcomePageField id="2defb7a6-aca0-43bc-8d73-cbd07e5b7503" />
+					<WelcomePageField id="413b4744-f709-4952-8864-fd38e60bd754" />
+					<WelcomePageField id="7cf8011a-9d47-44f4-a49e-f72d6b038161" />
+				</wpf:WelcomePageFields>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+				<FormTemplates xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms">
+					<Display>ListForm</Display>
+					<Edit>ListForm</Edit>
+					<New>DocSetDisplayForm</New>
+				</FormTemplates>
+			</XmlDocument>
+			<XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+				<FormUrls xmlns="http://schemas.microsoft.com/sharepoint/v3/contenttype/forms/url">
+					<New>_layouts/NewDocSet.aspx</New>
+				</FormUrls>
+			</XmlDocument>
+		</XmlDocuments>
+	</ContentType>
+</Elements>
